@@ -58,7 +58,7 @@ void auto_init_candev(void)
     extern void auto_init_esp_can(void);
     auto_init_esp_can();
 #endif
-#ifdef MODULE_CAN_KEA_MSCAN
+#ifdef MODULE_PERIPH_MSCAN
     extern void auto_init_can_mscan(void);
     auto_init_can_mscan();
 #endif

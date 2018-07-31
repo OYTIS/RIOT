@@ -1,0 +1,11 @@
+ifneq (,$(filter can,$(USEMODULE)))
+  USEMODULE += periph_mscan
+  CFLAGS += -DCAN_DLL_NUMOF=1
+endif
+
+USEMODULE += stdio_rtt
+
+# setup clock to run at 40MHz
+CFLAGS += -DCLOCK_SETUP=1
+
+include $(RIOTCPU)/kinetis/Makefile.dep
